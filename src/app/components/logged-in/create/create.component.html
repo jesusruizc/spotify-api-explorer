@@ -1,0 +1,16 @@
+
+<div>
+<h1>Authenticated!</h1>
+<button (click)="showTopTracks()">Show most played tracks</button>
+<div>
+    <ol>
+        <div *ngFor="let track of topTracks">
+            <li>
+        <strong>Name:</strong>{{track.name }} <br>
+        <strong>Album name:</strong>{{track.album.name}} <br>
+        <strong>Album Cover:</strong> <br>
+        <img src="{{track.album.images[1].url}}" alt=""></li>
+        </div>
+    </ol>
+</div>
+</div>
